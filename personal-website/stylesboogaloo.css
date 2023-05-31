@@ -1,0 +1,36 @@
+:root
+{
+    --CoolGamingCave: rgb(0, 0, 0);
+    --off-dew: rgb(38, 255, 0);
+    --MelloYello: rgb(242, 255, 0);
+    --size: 300px;
+}
+body
+{
+    font-family: Comic;
+    background-color: var(--CoolGamingCave);
+    color: var(--MelloYello);
+    outline: 10px double var(--off-dew);
+    height: 700px;
+}
+
+.nav-bar a {
+    float: left;
+    display: block;
+    color: var(--off-dew);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvetica-Bold;
+}
+.nav-bar a :hover {
+    background-color: var(--off-dew);
+}
+
+
+#lemonkey
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}

@@ -1,0 +1,160 @@
+:root
+{
+    --mountaintdont: rgb(123, 255, 0);
+    --off-dew: rgb(38, 255, 0);
+    --doritoes: rgb(255, 89, 0);
+    --size: 300px;
+}
+
+/* element type selectors */
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: Impact;
+    background-color: var(--mountaintdont);
+    outline: 3px ridge var(--doritoes);
+    color: purple;
+    
+}
+h3
+{
+    color: var(--doritoes);
+    font-size:35px;
+    align-self: center;
+}
+
+.button
+{
+    width: 270px;
+    padding: 20px;
+    background-color: transparent;
+    border-color: var(--off-dew);
+    border-width: 20px;
+    border-style: ridge;
+    align-self: center;
+    /* text */
+    font-size: 40px;
+    color: var(--doritoes);
+    text-decoration: double;
+    text-align: center;
+}
+.button:hover 
+{
+    background-color: var(--doritoes);
+    color: var(--mountaintdont);
+    border-color: var(--mtndew);
+}
+.accordion {
+    width: 100%;
+    border-style: solid;
+    padding: 25px;
+    background-color: var(--doritoes);
+
+    /* accordion text */
+    text-align: left;
+    font-size: 27px;
+    font-family: 'impact';
+    color: black;
+}
+.accordion:hover 
+{
+    background-color: var(--mtndew);
+
+}
+.panel 
+{
+    display: none;
+
+}
+.nav-bar {
+    background-color: transparent;
+}
+.nav-bar a {
+    float: left;
+    display: block;
+    color: var(--doritoes);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvetica-Bold;
+}
+.nav-bar a :hover {
+    background-color: var(--mtndew);
+}
+
+
+/* id name selectors */
+#below-header
+{
+    margin: 15%;
+}
+#header-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+ }
+ 
+#lists
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#intro-section
+{
+    background-color: rgba(200, 255, 0,0.9);
+    width: 350px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 40%;
+    margin-bottom: 0%;
+}
+
+
+#header-card
+{
+    background-color: rgba(200, 255, 0,0.9);
+    width: 350px;
+    height: 275px;
+    margin: auto;
+
+    /* child elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#profile-pic 
+{
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    border-radius: 10%;
+    flex-shrink: 0;
+}
+#name
+{
+    font-size: 60px;
+    color: var(--off-dew);
+    text-align: center;
+    letter-spacing: 3px;
+}
+#bio
+{
+    font-size: 30px;
+    color: var(--doritoes);
+    max-width: var(--size);
+    
+}
