@@ -1,5 +1,4 @@
 console.log("js is working");
-alert("Your computer has been infected with a virus!")
 
 let accordions = document.getElementsByClassName("accordion");
 for (let i = 0; i < accordions.length; i++) {
@@ -36,12 +35,11 @@ const responses = [
     "Outlook not so good",
     "My sources say no",
     "Very doubtful",
- ];
- 
- 
- let askButton = document.getElementById("ask-btn")
- let response = document.getElementById("magic-8-ball-response");
- askButton.addEventListener("click", function() {
+];
+
+let askButton = document.getElementById("ask-btn")
+let response = document.getElementById("magic-8-ball-response");
+askButton.addEventListener("click", function() {
     console.log("click");
     if (askButton.innerHTML === "Ask") {
         response.innerHTML = responses[Math.floor(Math.random() * responses.length)];
@@ -50,6 +48,23 @@ const responses = [
         response.innerHTML = ""
         askButton.innerHTML = "Ask";
     }
- });
- 
+});
 
+
+var time = 0;
+async function sinOpacity(){ //async so it doesnt hold up the other things
+    document.getElementById("header-card").style.opacity = (Math.sin(time) + 1)/2; //set the opacity using the time variable
+    time += .1; //incriment the varible
+    setTimeout(() => {sinOpacity();}, 10); //calling iteself again in 10ms
+}
+async function randomErrorMessages(){ //almost the same thing as the opacity
+    alert("Uh oh");
+    setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 2000)); //calling iteself again in 10ms
+}
+
+function doSomeAnimations(){
+    document.getElementById("header-card").style.animation = "flip 1s";
+}
+
+sinOpacity();
+setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 2000)); //just so it isnt instant
