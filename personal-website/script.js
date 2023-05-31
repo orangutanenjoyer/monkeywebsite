@@ -16,6 +16,13 @@ for (let i = 0; i < accordions.length; i++) {
        }
    });
 }
+
+const animations = [
+    "flip 1s",
+    "jump .5s",
+    "spin 1s",
+    "zoom 1s"
+]
 const responses = [
     "It is certain",
     "Without a doubt",
@@ -59,12 +66,26 @@ async function sinOpacity(){ //async so it doesnt hold up the other things
 }
 async function randomErrorMessages(){ //almost the same thing as the opacity
     alert("Uh oh");
-    setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 2000)); //calling iteself again in 10ms
+    setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 15000 + 2000)); //calling iteself again in 10ms
 }
 
-function doSomeAnimations(){
-    document.getElementById("header-card").style.animation = "flip 1s";
+//put onclick="doSomeAnimations()" in the button or links by the href to use it
+function doSomeAnimations(){ //put this wherever you want some crazy shit happening
+    var children = document.getElementById("body").children; //getting all children elements (only gets the surface ones)
+    var child;
+    for(i=0; i < children.length; i++){
+        child = children[i];
+        doAFlip(child); //this has to be put in a seperate function (I can explain later because its kind of complicated)
+    }
+}
+
+function doAFlip(element){
+    //console.log(element.name);
+    setTimeout(() => {
+        element.style.animation = animations[Math.floor(Math.random() * animations.length)] + "";
+        setTimeout(() => {element.style.animation = "none";}, 1000);
+    }, Math.floor(Math.random() * 250));
 }
 
 sinOpacity();
-setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 2000)); //just so it isnt instant
+setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 15000 + 2000)); //just so it isnt instant

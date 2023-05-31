@@ -7,11 +7,10 @@
         <link rel="stylesheet" href="keyframes.css" />
         <title>Gaming</title>
     </head>
-    <body>
+    <body id="body">
         <video id="header-video" autoplay loop muted>
             <source src="water-monkey.mp4" type="video/mp4">
         </video>
-        <a href="javascript:void(0);" onclick="doSomeAnimations()">test anim</a>
         
         <div class="nav-bar">
             <a href="index.html">HOME</a>
@@ -20,7 +19,7 @@
 
         <div id="header-card">
             <h1 id="name">Ya boy sbeve</h1>
-            <a class="button" href="#intro-section">LEARN MORE</a>
+            <a class="button" href="#intro-section" onclick="doSomeAnimations()">LEARN MORE</a>
         </div>    
         
         <div id="below-header">
@@ -39,7 +38,7 @@
             
             <div id="lists">
                 
-                <button class="accordion">Orangutan</button>
+                <button class="accordion" onclick="doSomeAnimations()">Orangutan</button>
                 <div class="panel">
                     <ol>
                         <li>Ook</li>
@@ -50,7 +49,7 @@
                     </ol>
                 </div>
                 
-                <button class="accordion">Hobbies</button>
+                <button class="accordion" onclick="doSomeAnimations()">Hobbies</button>
                 <div class="panel">
                     <ul>
                         <li>Banan</li>
@@ -63,7 +62,7 @@
                     </ul>
                 </div>
                 
-                <button class="accordion"><a href=https://www.bing.com/videos/search?q=monkey+swimming+meme&docid=603526047096254564&mid=2D6524B3FF1295CD7ECC2D6524B3FF1295CD7ECC&view=detail&FORM=VIRE> Best Monkeys</a> (Speciesism)</button>
+                <button class="accordion" onclick="doSomeAnimations()"><a href=https://www.bing.com/videos/search?q=monkey+swimming+meme&docid=603526047096254564&mid=2D6524B3FF1295CD7ECC2D6524B3FF1295CD7ECC&view=detail&FORM=VIRE> Best Monkeys</a> (Speciesism)</button>
                 <div class="panel">
                     <ol>
                         <li>Orangutan</li>
@@ -79,7 +78,7 @@
             
             <h1 style="margin-top: 100px;">Chat with a monke</h1>
             <input type="text" placeholder="give me your credit card #">
-            <button id="ask-btn">Ask</button>
+            <button id="ask-btn" onclick="doSomeAnimations()">Ask</button>
             <p id="magic-8-ball-response"></p>
         </div>
 
