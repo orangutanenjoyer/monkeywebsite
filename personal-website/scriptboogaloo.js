@@ -7,7 +7,7 @@ leTroll.addEventListener("click", function() {
     if(leTroll.innerHTML === "Submit")
     {
         lemonkey.style.zIndex = 1;
-        setInterval(f,3141)
+        
         lemonkey.style.zIndex = -1;
     }
     else
