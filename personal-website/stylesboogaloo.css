@@ -12,6 +12,8 @@ body
     color: var(--MelloYello);
     outline: 10px double var(--off-dew);
     height: 700px;
+
+    /*start animation*/
     animation: half-spin-end;
     animation-duration: .5s;
     animation-timing-function: ease-out;

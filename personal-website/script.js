@@ -22,7 +22,8 @@ const animations = [ //the random list of animations given to things
     "scale-vert .5s",
     "wiggle-vert .5s",
     "wiggle-horiz .5s",
-    "spin .5s"
+    "spin .5s",
+    "spin-reverse .5s"
 ]
 const responses = [
     "It is certain",

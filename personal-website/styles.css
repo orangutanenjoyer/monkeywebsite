@@ -18,6 +18,7 @@ body
     background-color: var(--mountaintdont);
     outline: 3px ridge var(--doritoes);
     color: purple;
+    /*start animation*/
     animation: half-spin-end;
     animation-duration: .5s;
     animation-timing-function: ease-out;
