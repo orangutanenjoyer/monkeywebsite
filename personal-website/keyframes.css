@@ -34,16 +34,22 @@
 	0%,100% {
 		transform: translateY(0);
 	}
-	50% {
-		transform: translateY(100px);
+	33%{
+		transform: translateY(-150px);
+	}
+	66% {
+		transform: translateY(150px);
 	}
 }
 @keyframes wiggle-horiz {
 	0%,100% {
 		transform: translateX(0);
 	}
-	50% {
-		transform: translateX(100px);
+	33%{
+		transform: translateX(-150px);
+	}
+	66% {
+		transform: translateX(150px);
 	}
 }
 @keyframes scale-horiz {
@@ -51,7 +57,7 @@
 		transform:scaleX(1);
 	}
 	50% {
-		transform:scaleX(.5);
+		transform:scaleX(.70);
 	}
 }
 @keyframes scale-vert {
@@ -59,7 +65,7 @@
 		transform:scaleY(1);
 	}
 	50% {
-		transform:scaleY(.5);
+		transform:scaleY(.70);
 	}
 }
 

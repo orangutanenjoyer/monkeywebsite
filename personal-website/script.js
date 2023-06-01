@@ -17,11 +17,12 @@ for (let i = 0; i < accordions.length; i++) {
    });
 }
 
-const animations = [
+const animations = [ //the random list of animations given to things
     "scale-horiz .5s",
     "scale-vert .5s",
     "wiggle-vert .5s",
-    "wiggle-horiz .5s"
+    "wiggle-horiz .5s",
+    "spin .5s"
 ]
 const responses = [
     "It is certain",
@@ -64,11 +65,19 @@ function leavePage(newHref){ //example can be seen in both nav bars
     document.getElementById("body").style.animation = "half-spin-start .5s ease-in"; //start spin animation
     setTimeout(() => {location.href = newHref;}, 400); //literally just a delayed link click
 }
+
+var animating = false; //this is so the random animations dont overlap and look bad
 function doSomeAnimations(){ //put this wherever you want some crazy shit happening (use just like leavePage())
-    var allElements = document.getElementsByTagName("*"); //get every single element
-    for(i=0; i < allElements.length; i++){ //loop through
-        doAFlip(allElements[i]); //this has to be put in a seperate function (I can explain later because its kind of complicated)
+    if(!animating){
+        var allElements = document.getElementsByTagName("*"); //get every single element
+        animating = true;
+        for(i=0; i < allElements.length; i++){ //loop through
+            if(allElements[i].children.length == 0){ //making sure it is the base element
+                doAFlip(allElements[i]); //this has to be put in a seperate function (I can explain later because its kind of complicated)
+            }
+        }
     }
+    setTimeout(() => {animating = false;}, 750);
 }
 
 //forever loops-------------
@@ -96,7 +105,7 @@ function doAFlip(element){
     //console.log(element.name);
     setTimeout(() => {
         element.style.animation = animations[Math.floor(Math.random() * animations.length)] + "";
-        setTimeout(() => {element.style.animation = "none";}, 1000);
+        setTimeout(() => {element.style.animation = "none";}, 750);
     }, Math.floor(Math.random() * 250));
 }
 
