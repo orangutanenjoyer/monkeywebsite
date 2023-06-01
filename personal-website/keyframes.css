@@ -76,4 +76,13 @@
 		transform:scaleY(.70);
 	}
 }
+@keyframes fadeInAndOut {
+	0%,100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
 

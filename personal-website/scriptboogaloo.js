@@ -24,3 +24,8 @@ function leavePage(newHref){
     document.getElementById("body").style.animation = "half-spin-start .5s ease-in";
     setTimeout(() => {location.href = newHref;}, 400);
 }
+
+function fadeInOutImage(imageID){
+    document.getElementById(imageID).style.animation = "fadeInAndOut 1s";
+    setTimeout(() => {document.getElementById(imageID).style.animation = "none";}, 1000);
+}
