@@ -18,7 +18,9 @@ body
     background-color: var(--mountaintdont);
     outline: 3px ridge var(--doritoes);
     color: purple;
-    
+    animation: half-spin-end;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
 }
 h3
 {
