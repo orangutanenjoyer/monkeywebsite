@@ -32,6 +32,10 @@ body
     background-color: var(--off-dew);
 }
 
+#darthplag
+{
+    font-size: 15px;
+}
 
 #dance-party
 {
@@ -75,4 +79,10 @@ body
     opacity: 0;
     width: 550px;
     height: 550px;
+}
+
+#nanners
+{
+    z-index: -1;
+    
 }
