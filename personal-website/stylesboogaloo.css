@@ -2,14 +2,14 @@
 {
     --CoolGamingCave: rgb(0, 0, 0);
     --off-dew: rgb(38, 255, 0);
-    --MelloYello: rgb(242, 255, 0);
+    --doritoes: rgb(255, 89, 0);
     --size: 300px;
 }
 body
 {
     font-family: Comic;
     background-color: var(--CoolGamingCave);
-    color: var(--MelloYello);
+    color: var(--doritoes);
     outline: 10px double var(--off-dew);
     height: 700px;
 
@@ -33,11 +33,12 @@ body
 }
 
 
-#danceparty
+#dance-party
 {
-    position: absolute;
     z-index: -1;
-    margin-left: auto;
+    width: 550px;
+    height: 550px;
+    float: right;
 }
 
 #lemonkey
