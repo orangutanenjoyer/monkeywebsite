@@ -41,7 +41,34 @@ body
     float: right;
 }
 
-#lemonkey
+#leww
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 550px;
+    height: 550px;
+}
+
+#lesbeve
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 550px;
+    height: 550px;
+}
+
+#letroll
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 550px;
+    height: 550px;
+}
+
+#leboner
 {
     position: absolute;
     z-index: -1;
