@@ -27,5 +27,8 @@ function leavePage(newHref){
 
 function fadeInOutImage(imageID){
     document.getElementById(imageID).style.animation = "fadeInAndOut 1s";
+    document.getElementById(imageID).style.zIndex = "1";
+    
     setTimeout(() => {document.getElementById(imageID).style.animation = "none";}, 1000);
+    setTimeout(() => {document.getElementById(imageID).style.zIndex = "-1";}, 1000);
 }
