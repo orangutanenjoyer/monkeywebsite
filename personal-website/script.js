@@ -71,11 +71,9 @@ async function randomErrorMessages(){ //almost the same thing as the opacity
 
 //put onclick="doSomeAnimations()" in the button or links by the href to use it
 function doSomeAnimations(){ //put this wherever you want some crazy shit happening
-    var children = document.getElementById("body").children; //getting all children elements (only gets the surface ones)
-    var child;
-    for(i=0; i < children.length; i++){
-        child = children[i];
-        doAFlip(child); //this has to be put in a seperate function (I can explain later because its kind of complicated)
+    var allElements = document.getElementsByTagName("*"); //get every single element
+    for(i=0; i < allElements.length; i++){ //loop through
+        doAFlip(allElements[i]); //this has to be put in a seperate function (I can explain later because its kind of complicated)
     }
 }
 

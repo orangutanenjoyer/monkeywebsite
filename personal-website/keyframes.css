@@ -19,7 +19,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(1000px);
+		transform: translateY(100px);
 	}
 }
 @keyframes zoom {
@@ -27,6 +27,6 @@
 		transform: translateX(0);
 	}
 	50% {
-		transform: translateX(1000px);
+		transform: translateX(100px);
 	}
 }
