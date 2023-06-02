@@ -44,6 +44,7 @@ body
     margin-right: 20px;
     margin-bottom: 15px;
     outline: 10px double var(--off-dew);
+    padding: 10px;
 }
 
 .nav-bar a {
