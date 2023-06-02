@@ -1,6 +1,5 @@
 console.log("js is working");
-alert(";)")
-//document.getElementById("body").style.animation = "half-spin-end .5s ease-out";
+setTimeout(() => {alert(";)");}, 500);
 setTimeout(() => {document.getElementById("body").style.animation = "none";}, 500);
 
 function leavePage(newHref){
