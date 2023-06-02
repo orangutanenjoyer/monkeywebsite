@@ -49,6 +49,11 @@ const responses = [
     "Very doubtful",
 ];
 
+const drivingVids = [
+    "monkey-drive.gif",
+    "funky-kong.jpg"
+]
+
 let askButton = document.getElementById("ask-btn")
 let response = document.getElementById("magic-8-ball-response");
 askButton.addEventListener("click", function() {
@@ -130,13 +135,15 @@ function spawnMonkey(height){
     drivingMonkeyContainer.append(newMonkey);
     newMonkey.id = ("driver" + monkeyID);
     newMonkey.style["top"] = height + "vh";
+    newMonkey.querySelector("[vid-source]").src = drivingVids[Math.floor(Math.random() * drivingVids.length)];
+    console.log(newMonkey.querySelector("[vid-source]").src);
     //newMonkey.style.top = height + "vh";
-    destroyElementByID("driver" + monkeyID, 4000);
+    destroyElementByID("driver" + monkeyID, 3900);
 }
 
 function destroyElementByID(elementID, delay=0){
     setTimeout(() => {
-        element = document.getElementById(elementID);
+        var element = document.getElementById(elementID);
         element.parentNode.removeChild(element);
     }, delay);
 }
