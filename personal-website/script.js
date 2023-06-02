@@ -105,15 +105,18 @@ async function randomErrorMessages(){ //almost the same thing as the opacity but
     alert(error);
     setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //calling iteself again
 }
-async function startSpawningMonkeys(){
-    spawnMonkey(Math.floor(Math.random()*100));
-    setTimeout(() => {startSpawningMonkeys();}, 2000);//continuing forever function
+async function spawnMonkeyChunk(){
+    var totalMonkeys = Math.floor(Math.random()*12 + 5);
+    for(var i = 0; i < totalMonkeys; i++){
+        setTimeout(() => {spawnMonkey(Math.floor(Math.random()*100));}, Math.floor(Math.random()*1000)); //spawn monkey
+    }
+    setTimeout(() => {spawnMonkeyChunk();}, Math.floor(Math.random()*10000 + 5000));//continuing forever function
 }
 
 //start forever loops-------------
 sinOpacity();
-//setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //to delay the dissapoitment
-startSpawningMonkeys();
+setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //to delay the dissapoitment
+setTimeout(() => {spawnMonkeyChunk();}, Math.floor(Math.random()*10000));
 
 //other----------------------------------
 ////stop spin animation at start
@@ -126,8 +129,9 @@ function spawnMonkey(height){
     var newMonkey = drivingMonkeyTemplate.content.cloneNode(true).children[0];
     drivingMonkeyContainer.append(newMonkey);
     newMonkey.id = ("driver" + monkeyID);
+    newMonkey.style["top"] = height + "vh";
     //newMonkey.style.top = height + "vh";
-    destroyElementByID("driver" + monkeyID, 10000);
+    destroyElementByID("driver" + monkeyID, 4000);
 }
 
 function destroyElementByID(elementID, delay=0){

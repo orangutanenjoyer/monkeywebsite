@@ -167,7 +167,7 @@ h3
     width: 0;
     height: 0;
     top: 50vh;
-    animation: driveAcross 10s linear;
+    animation: driveAcross 4s linear;
 }
 .driver-vid
 {
