@@ -1,5 +1,5 @@
 console.log("js is working");
-
+alert(";)")
 //document.getElementById("body").style.animation = "half-spin-end .5s ease-out";
 setTimeout(() => {document.getElementById("body").style.animation = "none";}, 500);
 

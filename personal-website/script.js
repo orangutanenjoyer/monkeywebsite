@@ -91,8 +91,18 @@ async function sinOpacity(){ //async so it doesnt hold up the other things
     time += .1; //incriment the varible
     setTimeout(() => {sinOpacity();}, 10); //calling iteself again in 10ms
 }
+const errors = [
+    "monke",
+    "Have you heard the tale of Darth Monkius the wise?",
+    "Your computer has been infected with a virus!",
+    "Uncle Maurice wants YOU for banana farming",
+    "Ooh ooh ah ah",
+    "Your mom!"
+]
+
 async function randomErrorMessages(){ //almost the same thing as the opacity but without the opacity (:
-    alert("monke");
+    let error = errors[Math.floor(Math.random() * errors.length)]
+    alert(error);
     setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //calling iteself again
 }
 async function startSpawningMonkeys(){
