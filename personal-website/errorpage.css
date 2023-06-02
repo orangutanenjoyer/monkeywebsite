@@ -1,0 +1,43 @@
+:root
+{
+    --mountaintdont: rgb(123, 255, 0);
+    --off-dew: rgb(38, 255, 0);
+    --doritoes: rgb(255, 89, 0);
+    --size: 300px;
+}
+
+/* element type selectors */
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: Impact;
+    background-color: var(--mountaintdont);
+    outline: 3px ridge var(--doritoes);
+    color: purple;
+    /*start animation*/
+    animation: half-spin-end;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}
+h3
+{
+    color: var(--doritoes);
+    font-size:35px;
+    align-self: center;
+}
+
+.error-card-image
+{
+    height: 20vh;
+}
+.error-card
+{
+    position: fixed;
+    height: 0;
+}
+
+

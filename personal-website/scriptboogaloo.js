@@ -39,6 +39,10 @@ function fadeInOutImage(){
     setTimeout(() => {document.getElementById(image).style.zIndex = "-1";}, 1000);
 }
 
+function goToSketch(){
+    location.href = 'errorpage.html';
+}
+
 async function setAd(adElement){
     var adToSet = ads[Math.floor(Math.random() * ads.length)];
     
