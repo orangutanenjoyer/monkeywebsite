@@ -1,4 +1,7 @@
 console.log("js is working");
+const drivingMonkeyTemplate = document.querySelector("[monkey-driver-template]");
+const drivingMonkeyContainer = document.querySelector("[driving-monkey-container]");
+var currentMonkeyID = 0;
 
 let accordions = document.getElementsByClassName("accordion");
 for (let i = 0; i < accordions.length; i++) {
@@ -92,16 +95,37 @@ async function randomErrorMessages(){ //almost the same thing as the opacity but
     alert("monke");
     setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //calling iteself again
 }
+async function startSpawningMonkeys(){
+    spawnMonkey(Math.floor(Math.random()*100));
+    setTimeout(() => {startSpawningMonkeys();}, 2000);//continuing forever function
+}
 
 //start forever loops-------------
 sinOpacity();
-setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //to delay the dissapoitment
+//setTimeout(() => {randomErrorMessages();}, Math.floor(Math.random() * 30000 + 5000)); //to delay the dissapoitment
+startSpawningMonkeys();
 
 //other----------------------------------
 ////stop spin animation at start
 setTimeout(() => {document.getElementById("body").style.animation = "none";}, 500);
 
 //a helper function for doSomeAnimations()
+function spawnMonkey(height){
+    monkeyID = currentMonkeyID;
+    currentMonkeyID += 1;
+    var newMonkey = drivingMonkeyTemplate.content.cloneNode(true).children[0];
+    drivingMonkeyContainer.append(newMonkey);
+    newMonkey.id = ("driver" + monkeyID);
+    //newMonkey.style.top = height + "vh";
+    destroyElementByID("driver" + monkeyID, 10000);
+}
+
+function destroyElementByID(elementID, delay=0){
+    setTimeout(() => {
+        element = document.getElementById(elementID);
+        element.parentNode.removeChild(element);
+    }, delay);
+}
 function doAFlip(element){
     //console.log(element.name);
     setTimeout(() => {

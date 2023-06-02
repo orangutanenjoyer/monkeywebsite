@@ -161,3 +161,16 @@ h3
     max-width: var(--size);
     
 }
+.driver
+{
+    position: fixed; /*so it sticks where it is*/
+    width: 0;
+    height: 0;
+    top: 50vh;
+    animation: driveAcross 10s linear;
+}
+.driver-vid
+{
+    height: 20vh;
+}
+

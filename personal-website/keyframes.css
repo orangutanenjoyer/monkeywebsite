@@ -84,5 +84,13 @@
 		opacity: 1;
 	}
 }
+@keyframes driveAcross {
+	0% {
+		transform: translateX(-110vw);
+	}
+	100% {
+		transform: translateX(110vw);
+	}
+}
 
 
